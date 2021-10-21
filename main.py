@@ -42,6 +42,8 @@ def clear_entry():
     matrix_entry_34.delete(0,END)
     matrix_entry_35.delete(0,END)
     matrix_entry_36.delete(0,END)
+    label_matrix = Label(root, font= font_2 , fg = 'black',bg='white',width=60,height=6)
+    label_matrix.place(x=40,y=481)
 
 
 def det_solve(matrice):
@@ -128,12 +130,14 @@ def matrix_composition():
                 
     matrix = numpy.array(list_matrix)
     
-    label_matrix = Label(root,text = matrix) # manca il posizionamento 
+    label_matrix = Label(root,text = matrix, font= font_2 , fg = 'black',bg='white')
+    label_matrix.place(x=40,y=481)
+    
     
     determinante = det_solve(matrix)
     
-    result_label = Label(root,text=determinante, font = font_1)
-    result_label.place(x=650,y=700)
+    result_label = Label(root,text=determinante, font = font_2, fg='black', bg ='white')
+    result_label.place(x=40,y=708)
     
 
 root = Tk()
@@ -143,7 +147,7 @@ root.resizable(False, False)
 # Font Section=====================================================================
 
 font_1 = ('Roboto Condenser',12)
-
+font_2 = ('Roboto Condenser',14)
 
 
 #End Font Section=====================================================================
@@ -295,7 +299,8 @@ button_settings.place(x=650,y=25)
 
 #End Button Section=============================================================
 
-
+label_matrix = Label(root,text = '', font= font_2 , fg = 'black',bg='white')
+label_matrix.place(x=40,y=481)
 
 
 root.mainloop()
