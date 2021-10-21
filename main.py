@@ -88,142 +88,149 @@ def matrix_composition():
 
 root = Tk()
 root.title('Matrix Solver')
-root.geometry('1000x800')
+root.geometry('720x800')
+root.resizable(False, False)
 # Font Section=====================================================================
 
-font_1 = ('Roboto Condenser',14)
+font_1 = ('Roboto Condenser',12)
 
 
 
 #End Font Section=====================================================================
+#Image Section =======================================================================
+
+bg_image = PhotoImage(file = 'bg.png')
+solve = PhotoImage(file='solve.png')
 
 
-frame_matrix_grid = Frame(root,width=80,height=80,bg='white')
-frame_matrix_grid.place(x=115,y=150)
+#End Image Section =======================================================================
+
+bg_label = Label(root,image = bg_image)
+bg_label.pack()
+
 
 #Entry Section (grid layout)====================================================
 
-matrix_entry_1 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_1.grid(row=1,column=1,padx=10,pady=30)
+matrix_entry_1 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_1.place(x=55,y=121)
 
-matrix_entry_2 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_2.grid(row=1,column=2,padx=10,pady=30)
+matrix_entry_2 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_2.place(x=164,y=121)
 
-matrix_entry_3 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_3.grid(row=1,column=3,padx=10,pady=30)
+matrix_entry_3 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_3.place(x=273,y=121)
 
-matrix_entry_4 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_4.grid(row=1,column=4,padx=10,pady=30)
+matrix_entry_4 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_4.place(x=382,y=121)
 
-matrix_entry_5 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_5.grid(row=1,column=5,padx=10,pady=30)
+matrix_entry_5 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_5.place(x=491,y=121)
 
-matrix_entry_6 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_6.grid(row=1,column=6,padx=10,pady=30)
+matrix_entry_6 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_6.place(x=600,y=121)
 
-matrix_entry_7 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_7.grid(row=2,column=1,padx=10,pady=30)
+matrix_entry_7 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_7.place(x=55,y=168)
 
-matrix_entry_8 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_8.grid(row=2,column=2,padx=10,pady=30)
+matrix_entry_8 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_8.place(x=164,y=168)
 
-matrix_entry_9 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_9.grid(row=2,column=3,padx=10,pady=30)
+matrix_entry_9 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_9.place(x=273,y=168)
 
-matrix_entry_10 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_10.grid(row=2,column=4,padx=10,pady=30)
+matrix_entry_10 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_10.place(x=382,y=168)
 
-matrix_entry_11 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_11.grid(row=2,column=5,padx=10,pady=30)
+matrix_entry_11 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_11.place(x=491,y=168)
 
-matrix_entry_12 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_12.grid(row=2,column=6,padx=10,pady=30)
+matrix_entry_12 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_12.place(x=600,y=168)
 
-matrix_entry_13 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_13.grid(row=3,column=1,padx=10,pady=30)
+matrix_entry_13 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_13.place(x=55,y=216)
 
-matrix_entry_14 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_14.grid(row=3,column=2,padx=10,pady=30)
+matrix_entry_14 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_14.place(x=164,y=216)
 
-matrix_entry_15 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_15.grid(row=3,column=3,padx=10,pady=30)
+matrix_entry_15 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_15.place(x=273,y=216)
 
-matrix_entry_16 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_16.grid(row=3,column=4,padx=10,pady=30)
+matrix_entry_16 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_16.place(x=382,y=216)
 
-matrix_entry_17 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_17.grid(row=3,column=5,padx=10,pady=30)
+matrix_entry_17 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_17.place(x=491,y=216)
 
-matrix_entry_18 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_18.grid(row=3,column=6,padx=10,pady=30)
+matrix_entry_18 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_18.place(x=600,y=216)
 
-matrix_entry_19 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_19.grid(row=4,column=1,padx=10,pady=30)
+matrix_entry_19 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_19.place(x=55,y=264)
 
-matrix_entry_20 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_20.grid(row=4,column=2,padx=10,pady=30)
+matrix_entry_20 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_20.place(x=164,y=264)
 
-matrix_entry_21 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_21.grid(row=4,column=3,padx=10,pady=30)
+matrix_entry_21 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_21.place(x=273,y=264)
 
-matrix_entry_22 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_22.grid(row=4,column=4,padx=10,pady=30)
+matrix_entry_22 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_22.place(x=382,y=264)
 
-matrix_entry_23 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_23.grid(row=4,column=5,padx=10,pady=30)
+matrix_entry_23 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_23.place(x=491,y=264)
 
-matrix_entry_24 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_24.grid(row=4,column=6,padx=10,pady=30)
+matrix_entry_24 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_24.place(x=600,y=264)
 
-matrix_entry_25 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_25.grid(row=5,column=1,padx=10,pady=30)
+matrix_entry_25 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_25.place(x=55,y=312)
 
-matrix_entry_26 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_26.grid(row=5,column=2,padx=10,pady=30)
+matrix_entry_26 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_26.place(x=164,y=312)
 
-matrix_entry_27 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_27.grid(row=5,column=3,padx=10,pady=30)
+matrix_entry_27 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_27.place(x=273,y=312)
 
-matrix_entry_28 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_28.grid(row=5,column=4,padx=10,pady=30)
+matrix_entry_28 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_28.place(x=382,y=312)
 
-matrix_entry_29 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_29.grid(row=5,column=5,padx=10,pady=30)
+matrix_entry_29 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_29.place(x=491,y=312)
 
-matrix_entry_30 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_30.grid(row=5,column=6,padx=10,pady=30)
+matrix_entry_30 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_30.place(x=600,y=312)
 
+matrix_entry_31 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_31.place(x=55,y=360)
 
-matrix_entry_31 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_31.grid(row=6,column=1,padx=10,pady=30)
+matrix_entry_32 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_32.place(x=164,y=360)
 
-matrix_entry_32 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_32.grid(row=6,column=2,padx=10,pady=30)
+matrix_entry_33 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_33.place(x=273,y=360)
 
-matrix_entry_33 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_33.grid(row=6,column=3,padx=10,pady=30)
+matrix_entry_34 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_34.place(x=382,y=360)
 
-matrix_entry_34 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_34.grid(row=6,column=4,padx=10,pady=30)
+matrix_entry_35 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_35.place(x=491,y=360)
 
-matrix_entry_35 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_35.grid(row=6,column=5,padx=10,pady=30)
-
-matrix_entry_36 = Entry(frame_matrix_grid,font=font_1,width=8)
-matrix_entry_36.grid(row=6,column=6,padx=10,pady=30)
-
+matrix_entry_36 = Entry(root,font=font_1,width=6,bg='#ECE8E8' ,highlightthickness = 0,borderwidth=0,selectbackground='white')
+matrix_entry_36.place(x=600,y=360)
 
 
 #End Entry Section (grid layout)====================================================
 
 #Button Section=============================================================
 
-button_solve= Button(root,text="Solve",font=font_1,command= matrix_composition)
-button_solve.place(x=470,y=700)
+button_solve= Button(root,image=solve,font=font_1,bg='#FFFFFF',command= matrix_composition,highlightthickness = 0,borderwidth=0,activebackground='#FFFFFF')
+button_solve.place(x=518,y=31)
 
 #End Button Section=============================================================
 
 label_copyright = Label(root, text='2021 Leonardo Ramazzotti')
 label_copyright.place(x=700,y=780)
+
 
 root.mainloop()
