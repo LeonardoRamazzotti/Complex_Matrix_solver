@@ -1,10 +1,29 @@
 from tkinter import *
+from tkinter import filedialog
 import math
 import cmath
 import numpy
 
+Folder_Name = ''
+
+def save_file():
+    global Folder_Name
+
+    
+
+    with open('untitled.txt','w') as file:
+
+        file.writelines(value)
+
+        file.close()
+    
+
+    Folder_Name = filedialog.askdirectory()
+   
 
 def clear_entry():
+
+    
 
     matrix_entry_1.delete(0,END)
     matrix_entry_2.delete(0,END)
@@ -138,6 +157,14 @@ def matrix_composition():
     
     result_label = Label(root,text=determinante, font = font_2, fg='black', bg ='white')
     result_label.place(x=40,y=708)
+
+    global value
+
+    value = (str(matrix),str(determinante))
+
+
+
+    
     
 
 root = Tk()
@@ -158,7 +185,7 @@ solve = PhotoImage(file='solve.png')
 clear = PhotoImage(file='clear.png')
 save= PhotoImage(file='save.png')
 setting = PhotoImage(file='settings.png')
-open = PhotoImage(file='open.png')
+open_file = PhotoImage(file='open.png')
 
 
 #End Image Section =======================================================================
@@ -288,10 +315,10 @@ button_solve.place(x=585,y=708)
 button_clear= Button(root,image=clear,font=font_1,bg='#FFFFFF',command= clear_entry,highlightthickness = 0,borderwidth=0,activebackground='#FFFFFF')
 button_clear.place(x=518,y=31)
 
-button_save= Button(root,image=save,font=font_1,bg='#FFFFFF',command= matrix_composition,highlightthickness = 0,borderwidth=0,activebackground='#FFFFFF')
+button_save= Button(root,image=save,font=font_1,bg='#FFFFFF',command= save_file ,highlightthickness = 0,borderwidth=0,activebackground='#FFFFFF')
 button_save.place(x=398,y=31)
 
-button_open= Button(root,image=open,font=font_1,bg='#FFFFFF',command= matrix_composition,highlightthickness = 0,borderwidth=0,activebackground='#FFFFFF')
+button_open= Button(root,image=open_file,font=font_1,bg='#FFFFFF',command= matrix_composition,highlightthickness = 0,borderwidth=0,activebackground='#FFFFFF')
 button_open.place(x=278,y=31)
 
 button_settings = Button(root,image=setting ,font=font_1,bg='#FFFFFF',command= matrix_composition,highlightthickness = 0,borderwidth=0,activebackground='#FFFFFF')
