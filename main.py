@@ -4,22 +4,56 @@ import math
 import cmath
 import numpy
 
-Folder_Name = ''
+
+
+def open_file_fun():
+    file_to_open=filedialog.askopenfile()
+    
+    
+    
+    file_content = file_to_open.read()
+    
+    print(file_content)
+   
+    data_file = file_content.split('\n')
+    
+    det = data_file[len(data_file)-1]
+    
+    mat = list(data_file[1:len(data_file)-2]) #da eliminare  una coppia di parentesi
+    
+    i=0
+    matrice_corretta =[]
+
+    while i< len(mat):
+        if i == 0 :
+            string = mat[i].replace('[','')
+            matrice_corretta.append(string)
+        elif i == len(mat)-1 :
+            string =  mat[i].replace(']','')
+            matrice_corretta.append(string)
+                    
+        else:
+            matrice_corretta.append(mat[i])
+
+        i+=1
+
+    matrice = numpy.array(mat)
+
+    print(det)
+    print(matrice)
+
+    label_matrix = Label(root,text = mat, font= font_2 , fg = 'black',bg='white')
+    label_matrix.place(x=40,y=481)
+    
 
 def save_file():
-    global Folder_Name
 
-    
+    file_path = filedialog.asksaveasfile() 
 
-    with open('untitled.txt','w') as file:
 
-        file.writelines(value)
+    file_path.writelines(value)
 
-        file.close()
-    
-
-    Folder_Name = filedialog.askdirectory()
-   
+    file_path.close()  
 
 def clear_entry():
 
@@ -160,8 +194,9 @@ def matrix_composition():
 
     global value
 
-    value = (str(matrix),str(determinante))
-
+    value = 'Matrix: \n'+str(matrix)+'\nSolution: \n'+str(determinante)
+    
+    print(value)
 
 
     
@@ -318,7 +353,7 @@ button_clear.place(x=518,y=31)
 button_save= Button(root,image=save,font=font_1,bg='#FFFFFF',command= save_file ,highlightthickness = 0,borderwidth=0,activebackground='#FFFFFF')
 button_save.place(x=398,y=31)
 
-button_open= Button(root,image=open_file,font=font_1,bg='#FFFFFF',command= matrix_composition,highlightthickness = 0,borderwidth=0,activebackground='#FFFFFF')
+button_open= Button(root,image=open_file,font=font_1,bg='#FFFFFF',command= open_file_fun,highlightthickness = 0,borderwidth=0,activebackground='#FFFFFF')
 button_open.place(x=278,y=31)
 
 button_settings = Button(root,image=setting ,font=font_1,bg='#FFFFFF',command= matrix_composition,highlightthickness = 0,borderwidth=0,activebackground='#FFFFFF')
